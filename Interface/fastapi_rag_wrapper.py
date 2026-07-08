@@ -210,6 +210,6 @@ async def get_logs(log_type: str = "main", date: str = None):
     return {"logs": "".join(lines[-1000:])}
 
 if __name__ == "__main__":
-    print("[INFO] Démarrage du serveur API sur http://0.0.0.0:8000")
+    print("[INFO] Démarrage du serveur API sur http://0.0.0.0:8600")
     # uvicorn lance le serveur. L'option reload=True permet de recharger automatiquement si on modifie le code.
-    uvicorn.run("fastapi_rag_wrapper:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("fastapi_rag_wrapper:app", host="0.0.0.0", port=8600, reload=True)

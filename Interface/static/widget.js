@@ -1,6 +1,9 @@
 (function () {
     // 1. Configuration
-    const API_URL = "http://127.0.0.1:8000/api/chat";
+    // Automatically determine the API base URL from where this script is hosted
+    const currentScript = document.currentScript;
+    const apiBaseUrl = currentScript ? new URL(currentScript.src).origin : "http://127.0.0.1:8600";
+    const API_URL = `${apiBaseUrl}/api/chat`;
     const PRIMARY_COLOR = "#f97316"; // Orange
     const BOT_NAME = "VICTORIA";
     

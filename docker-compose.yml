@@ -24,6 +24,8 @@ services:
     restart: unless-stopped
     depends_on:
       - qdrant
+    env_file:
+      - .env
     environment:
       - PYTHONUNBUFFERED=1
       - QDRANT_URL=http://qdrant:6333
